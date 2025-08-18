@@ -6,8 +6,6 @@ export default function ResultModal({ref, targetTime, remainingTime, onReset}){
 
   const lost = remainingTime <= 0;
   const formattedRemainingTime = (remainingTime / 1000).toFixed(2);
-  console.log(remainingTime)
-  console.log(targetTime)
   const score = Math.round((remainingTime / (targetTime*1000))*100)
 
   useImperativeHandle(ref, () => {
